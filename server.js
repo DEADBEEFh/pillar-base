@@ -31,6 +31,6 @@ var server = http.createServer(function(req, res){
   app(req, res, done)
 })
 
-server.listen(config.get('PORT'), config.get('IP'), function () {
+server.listen(process.env.PORT, config.get('IP'), function () {
   console.log( "Listening on " + config.get('IP') + ", port " + config.get('PORT') )
 });
